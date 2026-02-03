@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Matrimonial Matchmaking Portal">
+    <title>SoulBind Matrimony | Pure HTML Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="#FFE4E1"> <header>
+        <center>
+            <h1>SoulBind Matrimony</h1>
+            <p>Connecting Hearts Across the World</p>
+            <hr width="80%">
+        </center>
+    </header>
+
+    <nav>
+        <center>
+            <font size="4">
+                <a href="#interactive-map">Find Matches</a> | 
+                <a href="#profiles">Featured Profiles</a> | 
+                <a href="#locations">Our Offices</a> |
+                <a href="https://www.google.com" target="_blank">Success Stories</a>
+            </font>
+        </center>
+    </nav>
+
+    <br>
+
+    <section id="interactive-map">
+        <center>
+            <h2>Explore The Match</h2>
+            <p>Click the <b>Left Half</b> for Brides and the <b>Right Half</b> for Grooms</p>
+            
+            
+            <img src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                 alt="Wedding Rings" 
+                 width="800" 
+                 height="500" 
+                 usemap="#matrimonymap" 
+                 border="5">
+
+            <map name="matrimonymap">
+                <area shape="rect" coords="0,0,400,500" href="#brides" alt="Brides Section">
+                <area shape="rect" coords="401,0,800,500" href="#grooms" alt="Grooms Section">
+            </map>
+        </center>
+    </section>
+
+    <hr>
+
+    <div id="profiles">
+        <section id="brides">
+            <h3>Premium Bride Profiles</h3>
+            <ul>
+                <li><b>Anjali Sharma</b> - 26 yrs, Software Engineer (Bangalore)</li>
+                <li><b>Priya Patel</b> - 28 yrs, Pediatrician (Mumbai)</li>
+            </ul>
+            <center><a href="#interactive-map">Back to Map</a></center>
+        </section>
+
+        <section id="grooms">
+            <h3>Premium Groom Profiles</h3>
+            <ul>
+                <li><b>Rahul Verma</b> - 29 yrs, MBA / Product Manager (Delhi)</li>
+                <li><b>Vikram Singh</b> - 31 yrs, Commercial Pilot (Chennai)</li>
+            </ul>
+            <center><a href="#interactive-map">Back to Map</a></center>
+        </section>
+    </div>
+
+    <hr>
+
+    <section id="locations">
+        <center>
+            <h2>Our Global Headquarters</h2>
+            <p>Below is our office location loaded via an iframe:</p>
+            
+            
+            <iframe 
+                src="https://www.openstreetmap.org/export/embed.html" 
+                width="700" 
+                height="400" 
+                title="Office Location Map">
+            </iframe>
+        </center>
+    </section>
+
+    <br>
+
+    <footer>
+        <hr>
+        <center>
+            <p><b>&copy; 2026 SoulBind Matrimonial Project</b></p>
+            <p>Developed by: Harish</p>
+        </center>
+    </footer>
+
+</body>
+</html>
