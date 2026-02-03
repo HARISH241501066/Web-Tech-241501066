@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Matrimonial Matchmaking Portal">
+    <title>SoulBind Matrimony | Matchmaking Project</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff5f8;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #ad1457;
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 2px solid #f8bbd0;
+            padding-bottom: 10px;
+        }
+
+        /* Map Styling */
+        .hotspot-image {
+            border: 10px solid #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Frame Styling */
+        iframe {
+            border: 6px double #d81b60;
+            border-radius: 20px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* List Styling */
+        .profile-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .profile-list li {
+            background: #fff8fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid #ffc107;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="background: linear-gradient(to right, #ad1457, #d81b60); color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid #ffc107;">
+        <h1 style="font-size: 3rem; margin: 0;">SoulBind Matrimony</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">Connecting Hearts Across the World</p>
+    </header>
+
+    <nav style="background-color: #333; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000;">
+        <a href="#interactive-map" style="color: #ffc107; text-decoration: none; font-weight: bold; margin: 0 15px;">Find Matches</a>
+        <a href="#profiles" style="color: #ffc107; text-decoration: none; font-weight: bold; margin: 0 15px;">Featured Profiles</a>
+        <a href="#locations" style="color: #ffc107; text-decoration: none; font-weight: bold; margin: 0 15px;">Our Offices</a>
+    </nav>
+
+    <section id="interactive-map">
+        <h2>Explore The Match</h2>
+        <p style="text-align: center; color: #666;">Select a region by clicking the image below.</p>
+        
+        
+        <img src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800" 
+             alt="Wedding Rings" 
+             usemap="#matrimonymap" 
+             class="hotspot-image">
+
+        <map name="matrimonymap">
+            <area shape="rect" coords="0,0,400,600" href="#brides" alt="Brides Section">
+            <area shape="rect" coords="401,0,800,600" href="#grooms" alt="Grooms Section">
+        </map>
+    </section>
+
+    <div id="profiles">
+        <section id="brides">
+            <h3 style="color: #ad1457; border-left: 5px solid #ad1457; padding-left: 10px;">Premium Bride Profiles</h3>
+            <ul class="profile-list">
+                <li><b>Anjali Sharma</b> - 26 yrs, Software Engineer (Bangalore)</li>
+                <li><b>Priya Patel</b> - 28 yrs, Pediatrician (Mumbai)</li>
+            </ul>
+            <center><a href="#interactive-map" style="color: #d81b60; font-weight: bold; text-decoration: none;">↑ Back to Map</a></center>
+        </section>
+
+        <section id="grooms">
+            <h3 style="color: #ad1457; border-left: 5px solid #ad1457; padding-left: 10px;">Premium Groom Profiles</h3>
+            <ul class="profile-list">
+                <li><b>Rahul Verma</b> - 29 yrs, MBA / Product Manager (Delhi)</li>
+                <li><b>Vikram Singh</b> - 31 yrs, Commercial Pilot (Chennai)</li>
+            </ul>
+            <center><a href="#interactive-map" style="color: #d81b60; font-weight: bold; text-decoration: none;">↑ Back to Map</a></center>
+        </section>
+    </div>
+
+    <section id="locations">
+        <h2>Our Global Headquarters</h2>
+        <p style="text-align: center; font-weight: bold; color: #ad1457;">Visit us at our main center for a personal consultation.</p>
+        
+        
+        <iframe 
+            src="https://www.openstreetmap.org/export/embed.html" 
+            width="80%" 
+            height="400" 
+            title="Office Location Map">
+        </iframe>
+    </section>
+
+    <footer style="background-color: #222; color: #888; padding: 40px; text-align: center; margin-top: 50px;">
+        <p style="color: #fff; margin-bottom: 5px;">&copy; 2026 SoulBind Matrimonial Project</p>
+        <p style="font-size: 14px;">Designed and Developed by: <strong>Harish</strong></p>
+    </footer>
+
+</body>
+</html>

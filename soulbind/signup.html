@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulBind | Sign Up</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff5f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            border-top: 8px solid #ad1457;
+        }
+        h2 { color: #ad1457; text-align: center; margin-bottom: 5px; text-transform: uppercase; }
+        p.subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 30px; }
+        
+        .input-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; color: #ad1457; font-weight: bold; font-size: 14px; }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #f8bbd0;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        input:focus { border-color: #d81b60; outline: none; }
+        
+        .error { color: #d81b60; font-size: 12px; margin-top: 5px; display: none; }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #d81b60;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        button:hover { background: #ad1457; }
+        
+        .login-link { text-align: center; margin-top: 15px; font-size: 14px; }
+        .login-link a { color: #ad1457; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>SOULBIND</h2>
+    <p class="subtitle">Enter your details to find your perfect match</p>
+
+    <form id="registrationForm">
+        <div class="input-group">
+            <label>First Name</label>
+            <input type="text" id="firstName" placeholder="first name">
+            <div id="fnError" class="error">First name must be at least 6 alphabets (no numbers/spaces).</div>
+        </div>
+
+        <div class="input-group">
+            <label>Last Name</label>
+            <input type="text" id="lastName" placeholder="lastName">
+            <div id="lnError" class="error">Last name cannot be empty.</div>
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="password">
+            <div id="pwError" class="error">Password must be at least 6 characters.</div>
+        </div>
+
+        <div class="input-group">
+            <label>E-mail</label>
+            <input type="text" id="email" placeholder="email">
+            <div id="emError" class="error">Please enter a valid email address.</div>
+        </div>
+
+        <div class="input-group">
+            <label>Mobile Number</label>
+            <input type="text" id="mobile" placeholder="mobile">
+            <div id="mbError" class="error">Enter a valid 10-digit mobile number.</div>
+        </div>
+
+        <div class="input-group">
+            <label>Address</label>
+            <textarea id="address" rows="3" placeholder="address"></textarea>
+            <div id="adError" class="error">Address cannot be empty.</div>
+        </div>
+
+        <button type="submit">Create Profile</button>
+    </form>
+
+    <div class="login-link">
+        Already have an account? <a href="login.html">Sign In</a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+
+        // Reset Errors
+        document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
+
+        // Validation Logic
+        const firstName = document.getElementById('firstName').value;
+        if (firstName.length < 0 || !/^[A-Za-z]+$/.test(firstName)) {
+            document.getElementById('fnError').style.display = 'block';
+            isValid = false;
+        }
+
+        const lastName = document.getElementById('lastName').value;
+        if (lastName.trim() === "") {
+            document.getElementById('lnError').style.display = 'block';
+            isValid = false;
+        }
+
+        const password = document.getElementById('password').value;
+        if (password.length < 6) {
+            document.getElementById('pwError').style.display = 'block';
+            isValid = false;
+        }
+
+        const email = document.getElementById('email').value;
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            document.getElementById('emError').style.display = 'block';
+            isValid = false;
+        }
+
+        const mobile = document.getElementById('mobile').value;
+        if (!/^[0-9]{10}$/.test(mobile)) {
+            document.getElementById('mbError').style.display = 'block';
+            isValid = false;
+        }
+
+        const address = document.getElementById('address').value;
+        if (address.trim() === "") {
+            document.getElementById('adError').style.display = 'block';
+            isValid = false;
+        }
+
+        // REDIRECTION LOGIC
+        if (isValid) {
+            alert("Account created successfully! Redirecting to login...");
+            // Redirects to login.html
+            window.location.href = "login.html"; 
+        }
+    });
+</script>
+
+</body>
+</html>
